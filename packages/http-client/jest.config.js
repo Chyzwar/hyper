@@ -1,11 +1,9 @@
 
 export default {
+  displayName: "@hyper/http-client",
   testEnvironment: "node",
-  preset: "ts-jest",
-  roots: ["<rootDir>/src/"],
-  displayName: {
-    name: "@hyper/http-client",
-    color: "blue",
-  },
+  transform: {},
+  testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.(js?|jsx?)$",
+  roots: ["<rootDir>/lib/"],
 };
 

@@ -1,3 +1,4 @@
+process.env.NODE_OPTIONS = "--experimental-vm-modules";
 
 export default {
   verbose: false,
@@ -5,15 +6,4 @@ export default {
   projects: [
     "<rootDir>/packages/*/integration/jest.config.js",
   ],
-  globals: {
-    "ts-jest": {
-      tsconfig: {
-        allowJs: true,
-      },
-    },
-  },
-  transform: {
-    "^.+\\.(js|jsx)?$": "ts-jest",
-    "^.+\\.(ts|tsx)?$": "ts-jest",
-  },
 };

@@ -29,7 +29,12 @@
     "@types/node": "16.x.x",
     "eslint": "7.x.x",
     "jest": "27.x.x",
-    "ts-jest": "27.x.x",
     "typescript": "4.x.x"
-  }
+  }, 
+  "files": [
+    "src/",
+    "lib/",
+    "!**/__tests__/",
+    "!lib/buildInfo.json"
+  ]
 }

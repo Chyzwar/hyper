@@ -19,8 +19,13 @@
     "**/benchmarks/**/*js"
   ],
   "references": [
-    {"path": "./packages"},
-    {"path": "./clients"},
-    {"path": "./services"}
+    {"path": "./packages/event-emitter/tsconfig.build.json"},
+    {"path": "./packages/generic-types/tsconfig.build.json"},
+    {"path": "./packages/http/tsconfig.build.json"},
+    {"path": "./packages/http-client/tsconfig.build.json"},
+    {"path": "./packages/http-server/tsconfig.build.json"},
+    {"path": "./packages/logger/tsconfig.build.json"},
+    {"path": "./packages/utility-types/tsconfig.build.json"},
+    {"path": "./packages/utils/tsconfig.build.json"}
   ]
 }

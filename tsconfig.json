@@ -10,13 +10,13 @@
   },
   "include": [],
   "references": [
-    {"path": "./packages/event-emitter/tsconfig.build.json"},
-    {"path": "./packages/generic-types/tsconfig.build.json"},
-    {"path": "./packages/http/tsconfig.build.json"},
-    {"path": "./packages/http-client/tsconfig.build.json"},
-    {"path": "./packages/http-server/tsconfig.build.json"},
-    {"path": "./packages/logger/tsconfig.build.json"},
-    {"path": "./packages/utility-types/tsconfig.build.json"},
-    {"path": "./packages/utils/tsconfig.build.json"}
+    {"path": "./packages/event-emitter/tsconfig.json"},
+    {"path": "./packages/generic-types/tsconfig.json"},
+    {"path": "./packages/http/tsconfig.json"},
+    {"path": "./packages/http-client/tsconfig.json"},
+    {"path": "./packages/http-server/tsconfig.json"},
+    {"path": "./packages/logger/tsconfig.json"},
+    {"path": "./packages/utility-types/tsconfig.json"},
+    {"path": "./packages/utils/tsconfig.json"}
   ]
 }

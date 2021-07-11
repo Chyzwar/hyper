@@ -1,6 +1,6 @@
 
 module.exports = {
-  extends: "@hyper/eslint-config/node",
+  extends: "@hyper/eslint-config",
   rules: {
     "no-console": "off",
     "@typescript-eslint/no-magic-numbers": "off",

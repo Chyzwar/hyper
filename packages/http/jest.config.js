@@ -1,25 +1,9 @@
 
 export default {
-  displayName: "http",
-  transform: {
-    "^.+\\.ts?$": "ts-jest",
-  },
-  testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.(ts?|tsx?)$",
-  moduleFileExtensions: [
-    "ts",
-    "tsx",
-    "json",
-    "js",
-    "jsx",
-  ],
-  testPathIgnorePatterns: [
-    "/node_modules/",
-    "/examples/",
-    "/tmp/",
-  ],
-  modulePathIgnorePatterns: [
-    "/examples/",
-    "/tmp/",
-  ],
+  displayName: "@hyper/http",
+  testEnvironment: "node",
+  transform: {},
+  testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.(js?|jsx?)$",
+  roots: ["<rootDir>/lib/"],
 };
 

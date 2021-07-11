@@ -1,10 +1,15 @@
 {
-  "extends": "./tsconfig.base.json",
+  "extends": "@hyper/tsc-config/library.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "lib",
+    "tsBuildInfoFile": "./lib/buildInfo.json",    
+  },
   "include": [
     "src/**/*.ts",
     "src/**/*.json"
   ],
   "references": [
-    {"path": "../utility-types/tsconfig.build.json"}
+    {"path": "../utility-types/tsconfig.json"}
   ]
 }
