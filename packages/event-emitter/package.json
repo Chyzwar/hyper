@@ -1,0 +1,31 @@
+{
+  "name": "@hyper/event-emitter",
+  "version": "0.4.0",
+  "engines": {
+    "node": "16.x.x",
+    "yarn": "1.x.x"
+  },
+  "type": "module",
+  "main": "./lib/index.js",
+  "description": "Simple type-safe EventEmitter",
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc --build",
+    "build:watch": "tsc --watch --build",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --fix --ext .ts",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "author": "chyzwar",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@hyper/eslint-config": "0.x.x",
+    "@hyper/tsc-config": "0.x.x",
+    "@types/jest": "26.x.x",
+    "eslint": "7.x.x",
+    "jest": "26.x.x",
+    "ts-jest": "27.x.x",
+    "typescript": "4.x.x"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "@hyper/http",
+  "version": "0.0.1",
+  "engines": {
+    "node": "16.x.x",
+    "yarn": "1.x.x"
+  },
+  "type": "module",
+  "main": "./lib/index.js",
+  "description": "Http client for electron and node",
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc --build",
+    "build:watch": "tsc --build  --watch",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --fix --ext .ts",
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watch --passWithNoTests"
+  },
+  "keywords": [
+    "http"
+  ],
+  "author": "chyzwar",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@hyper/utility-types": "0.x.x"
+  },
+  "devDependencies": {
+    "@hyper/eslint-config": "0.x.x",
+    "@hyper/tsc-config": "0.x.x",
+    "@types/jest": "26.x.x",
+    "eslint": "7.x.x",
+    "jest": "26.x.x",
+    "ts-jest": "27.x.x",
+    "typescript": "4.x.x"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@hyper/utils",
+  "version": "0.1.0",
+  "engines": {
+    "node": "16.x.x",
+    "yarn": "1.x.x"
+  },
+  "type": "module",
+  "main": "./lib/index.js",
+  "description": "Utilities",
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc --build",
+    "build:watch": "tsc --build --watch",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --fix --ext .ts",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "author": "chyzwar",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@hyper/generic-types": "0.x.x"
+  },
+  "devDependencies": {
+    "@hyper/eslint-config": "0.x.x",
+    "@hyper/tsc-config": "0.x.x",
+    "@types/jest": "26.x.x",
+    "@types/node": "16.x.x",
+    "eslint": "7.x.x",
+    "jest": "27.x.x",
+    "ts-jest": "27.x.x",
+    "typescript": "4.x.x"
+  }
+}

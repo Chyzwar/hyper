@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.base.json",
+  "include": [
+    "src/**/*.ts",  
+    "types/**/*.ts"
+  ],
+  "references": [
+    {"path": "../utility-types/tsconfig.build.json"},
+    {"path": "../generic-types/tsconfig.build.json"},
+    {"path": "../http/tsconfig.build.json"},
+    {"path": "../logger/tsconfig.build.json"},
+    {"path": "../utils/tsconfig.build.json"}
+  ]
+}

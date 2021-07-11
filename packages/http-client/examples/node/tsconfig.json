@@ -1,0 +1,11 @@
+
+{
+  "extends": "@hyper/tsc-config/app.json",
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.json"
+  ],
+  "exclude": [
+    "src/**/*.test.ts"
+  ]
+}

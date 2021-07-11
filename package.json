@@ -1,0 +1,39 @@
+{
+  "name": "@hyper/root",
+  "private": true,
+  "type": "module",
+  "workspaces": {
+    "packages": [
+      "packages/**",
+      "clients/**",
+      "services/**"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": "yarn lint"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "build:clean": "tsc --clean",
+    "build:watch": "tsc --build --watch",
+    "test": "jest -c jest.unit.js",
+    "test:coverage": "jest -c jest.unit.js --coverage",
+    "test:watch": "jest -c jest.unit.js --watch",
+    "int": "jest -c jest.int.js",
+    "int:watch": "jest -c jest.unit.js --coverage",
+    "int:detect": "jest -c jest.unit.js --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:watch": "eslint . --fix --watch",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "12.x.x",
+    "@commitlint/config-conventional": "12.x.x",
+    "eslint": "7.x.x",
+    "jest": "27.x.x",
+    "husky": "7.x.x",
+    "lint-staged": "11.x.x",
+    "typescript": "4.x.x"
+  }
+}

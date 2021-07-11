@@ -1,0 +1,20 @@
+{
+  "name": "@hyper/event-emitter-benchmarks",
+  "version": "0.0.0",
+  "description": "event emitter benchmarks",
+  "type": "module",
+  "scripts": {
+    "benchmark": "find suites -name '*.js' -exec ./start.sh {} \\;"
+  },
+  "author": "Arnout Kazemier, Marcin Kopacz",
+  "license": "MIT",
+  "dependencies": {
+    "@hyper/event-emitter": "0.x.x",
+    "benchmark": "2.x.x",
+    "eventemitter3": "4.x.x"
+  },
+  "devDependencies": {
+    "@hyper/eslint-config": "0.x.x",
+    "eslint": "7.x.x"
+  }
+}

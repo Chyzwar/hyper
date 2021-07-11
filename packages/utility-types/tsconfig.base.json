@@ -1,0 +1,33 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "module": "ESNext",
+    "target": "ES2020",
+    "newLine": "lf",
+    "jsx": "react",
+    "outDir": "lib",
+    "rootDir": "src",
+    "tsBuildInfoFile": "./lib/buildInfo.json",
+    "incremental": true,
+    "experimentalDecorators": true,
+    
+    "allowUnreachableCode": false,
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "sourceMap": false,
+    "pretty": true,
+    "declaration": true,
+    "declarationMap": true,
+    "listEmittedFiles": false,
+    "composite": true,
+    "types": ["jest"]
+  }
+}

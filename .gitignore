@@ -1,0 +1,18 @@
+# Logs and env files#
+*.log
+*.tfvars
+*.env
+
+# Node reports
+report.*.json
+
+# Eslint cache
+.eslintcache
+
+# Folders #
+coverage
+node_modules
+
+# Build Files #
+dist
+lib

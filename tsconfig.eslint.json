@@ -1,0 +1,26 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "allowJs": true,  
+    "noEmit": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true
+  },
+  "include": [
+    "**/.eslintrc.js",
+    "**/.eslintrc.cjs",
+    "**/commitlint.config.js",
+    "**/jest.int.js",
+    "**/jest.unit.js",
+    "**/jest.setup.js",
+    "**/jest.config.js",
+    "**/examples/**/*js",
+    "**/benchmarks/**/*js"
+  ],
+  "references": [
+    {"path": "./packages"},
+    {"path": "./clients"},
+    {"path": "./services"}
+  ]
+}

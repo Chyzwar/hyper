@@ -1,0 +1,44 @@
+{
+  "name": "@hyper/http-server",
+  "version": "0.3.0",
+  "engines": {
+    "node": "16.x.x",
+    "yarn": "1.x.x"
+  },
+  "type": "module",
+  "main": "./lib/index/default.js",
+  "description": "Http Server",
+  "author": "chyzwar",
+  "license": "UNLICENSED",
+  "sideEffects": false,
+  "keywords": [
+    "web framework",
+    "middleware"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "build:watch": "tsc --build --watch",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --fix --ext .ts",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@hyper/event-emitter": "0.x.x",
+    "@hyper/generic-types": "0.x.x",
+    "@hyper/http": "0.x.x",
+    "@hyper/logger": "0.x.x",
+    "@hyper/utility-types": "0.x.x",
+    "@hyper/utils": "0.x.x",
+    "@types/node": "16.x.x"
+  },
+  "devDependencies": {
+    "@hyper/eslint-config": "0.x.x",
+    "@hyper/tsc-config": "0.x.x",
+    "@types/jest": "26.x.x",
+    "eslint": "7.x.x",
+    "jest": "26.x.x",
+    "ts-jest": "27.x.x",
+    "typescript": "4.x.x"
+  }
+}

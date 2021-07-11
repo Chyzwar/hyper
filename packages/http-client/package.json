@@ -1,0 +1,42 @@
+{
+  "name": "@hyper/http-client",
+  "version": "0.2.0",
+  "description": "HTTp client for browser",
+  "engines": {
+    "node": "16.x.x",
+    "yarn": "1.x.x"
+  },
+  "type": "module",
+  "main": "./lib/index/default.js",
+  "exports": {
+    "browser": "./lib/index/browser.js",
+    "node": "./lib/index/node.js"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc --build",
+    "build:watch": "tsc --build --watch",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --fix --ext .ts",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "author": "chyzwar",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@hyper/generic-types": "0.x.x",
+    "@hyper/http": "0.x.x",
+    "@hyper/utility-types": "0.x.x",
+    "@hyper/utils": "0.x.x"
+  },
+  "devDependencies": {
+    "@hyper/eslint-config": "0.x.x",
+    "@hyper/tsc-config": "0.x.x",
+    "@types/jest": "26.x.x",
+    "@types/node": "16.x.x",
+    "eslint": "7.x.x",
+    "jest": "26.x.x",
+    "ts-jest": "27.x.x",
+    "typescript": "4.x.x"
+  }
+}

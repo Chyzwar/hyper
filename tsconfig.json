@@ -1,0 +1,22 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "composite": true,
+    "allowJs": true,
+    "incremental": true,
+    "skipLibCheck": true,
+    "preserveWatchOutput": true,
+    "pretty": true
+  },
+  "include": [],
+  "references": [
+    {"path": "./packages/event-emitter/tsconfig.build.json"},
+    {"path": "./packages/generic-types/tsconfig.build.json"},
+    {"path": "./packages/http/tsconfig.build.json"},
+    {"path": "./packages/http-client/tsconfig.build.json"},
+    {"path": "./packages/http-server/tsconfig.build.json"},
+    {"path": "./packages/logger/tsconfig.build.json"},
+    {"path": "./packages/utility-types/tsconfig.build.json"},
+    {"path": "./packages/utils/tsconfig.build.json"}
+  ]
+}

@@ -1,0 +1,17 @@
+{
+
+  "jest.autoEnable": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  "cSpell.words": [],
+  "cSpell.ignoreWords": [
+    "ionicons"
+  ],
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/lib": true,
+    "**/dist": true
+  },
+  "eslint.enable": true
+}

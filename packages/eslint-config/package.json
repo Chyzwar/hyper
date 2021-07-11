@@ -1,0 +1,24 @@
+{
+  "name": "@hyper/eslint-config",
+  "version": "0.2.0",
+  "author": "chyzwar",
+  "license": "UNLICENSED",
+  "main": "./node.js",
+  "engines": {
+    "node": "16.x.x",
+    "yarn": "1.x.x"
+  },
+  "description": "Eslint Typescript Config",
+  "keywords": [
+    "eslint"
+  ],
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "4.x.x",
+    "@typescript-eslint/parser": "4.x.x",
+    "eslint-plugin-jest": "24.x.x",
+    "find-up": "5.x.x"
+  },
+  "peerDependencies": {
+    "eslint": "7.x.x"
+  }
+}
