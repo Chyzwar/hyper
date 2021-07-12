@@ -15,7 +15,7 @@ class Http1Response<B> extends ServerResponse {
   public options: Readonly<ResponseOptions> = defaultResponseOptions;
 
   public get stream(): ServerHttp2Stream {
-    throw new Error("http v1 req do not have stream");
+    throw new Error("http v1 res do not have stream");
   }
 
   public createPushResponse(): void {

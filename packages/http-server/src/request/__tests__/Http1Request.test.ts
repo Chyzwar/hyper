@@ -8,7 +8,7 @@ describe("Http1Request", () => {
       const socket = {} as Socket;
       const request = new Http1Request(socket);
 
-      expect(request.stream).toThrowError("http v1 req do not have stream");
+      expect(() => request.stream).toThrowError("http v1 req do not have stream");
     });
   });
 

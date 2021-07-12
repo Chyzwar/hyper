@@ -20,7 +20,7 @@
     "build:watch": "tsc --build --watch",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --fix --ext .ts",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "test": "jest",
     "test:watch": "jest --watch"
   },
   "dependencies": {

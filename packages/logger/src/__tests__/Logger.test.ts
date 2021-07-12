@@ -1,5 +1,6 @@
-import Logger, {defaults} from "../Logger";
-import Level from "../enums/Level";
+import {jest} from "@jest/globals";
+import Logger, {defaults} from "../Logger.js";
+import Level from "../enums/Level.js";
 
 describe("Logger", () => {
   describe("constructor", () => {

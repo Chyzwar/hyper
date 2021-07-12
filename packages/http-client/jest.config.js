@@ -1,7 +1,7 @@
 
 export default {
   displayName: "@hyper/http-client",
-  testEnvironment: "node",
+  testEnvironment: "jsdom",
   transform: {},
   testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.(js?|jsx?)$",
   roots: ["<rootDir>/lib/"],

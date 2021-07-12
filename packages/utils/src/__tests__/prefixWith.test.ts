@@ -1,4 +1,4 @@
-import prefixWith from "../prefixWith";
+import prefixWith from "../prefixWith.js";
 
 
 describe("prefixWith", () => {

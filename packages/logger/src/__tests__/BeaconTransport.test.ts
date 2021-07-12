@@ -1,5 +1,6 @@
-import BeaconTransport from "../BeaconTransport";
-import Level from "../enums/Level";
+import {jest} from "@jest/globals";
+import BeaconTransport from "../BeaconTransport.js";
+import Level from "../enums/Level.js";
 
 describe("BeaconTransport", () => {
   const url = new URL("http://test.invalid/");
@@ -17,6 +18,6 @@ describe("BeaconTransport", () => {
     };
     transport.send(message);
 
-    expect(sendBeacon).toHaveBeenCalledWith(url, JSON.stringify(message));
+    expect(sendBeacon).toHaveBeenCalledWith(url.toString(), JSON.stringify(message));
   });
 });

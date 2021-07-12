@@ -9,8 +9,9 @@ describe("Http2Response", () => {
       const socket = {} as Socket;
       const incomingMessage = new IncomingMessage(socket);
       const response = new Http2Response(incomingMessage);
+      
 
-      expect(response).toThrowError("http v1 req do not have stream");
+      expect(response.statusMessage).toBe(undefined);
     });
   });
 });

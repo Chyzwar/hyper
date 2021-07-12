@@ -1,4 +1,4 @@
-import huid from "../huid";
+import huid from "../huid.js";
 
 
 describe("huid", () => {

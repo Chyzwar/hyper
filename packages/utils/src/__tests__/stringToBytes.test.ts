@@ -1,4 +1,4 @@
-import stringToBytes from "../stringToBytes";
+import stringToBytes from "../stringToBytes.js";
 
 describe("stringToBytes", () => {
   describe("stringToBytes", () => {

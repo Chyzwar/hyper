@@ -14,6 +14,7 @@ const map: Record<string, number> = {
   Mb: 1048576,
   mB: 1048576,
 
+  gB: 1073741824,
   gb: 1073741824,
   GB: 1073741824,
   Gb: 1073741824,

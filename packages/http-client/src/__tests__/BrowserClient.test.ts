@@ -1,13 +1,12 @@
-/* eslint-disable @typescript-eslint/require-await */
 
+import {jest} from "@jest/globals";
 import {HeaderName, ContentType, UserAgent} from "@hyper/http";
-
 import BrowserClient from "../BrowserClient.js";
 
 describe("BrowserClient", () => {
   const mockFetchPromise = Promise.resolve({
     ok: true,
-    json: async() => ({google: "ok"}),
+    json: async() => Promise.resolve({google: "ok"}),
   } as unknown as Response);
 
   window.fetch = async(): Promise<Response> => mockFetchPromise;

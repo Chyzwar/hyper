@@ -10,7 +10,7 @@ describe("Http1Response", () => {
       const incomingMessage = new IncomingMessage(socket);
       const response = new Http1Response(incomingMessage);
 
-      expect(response).toThrowError("http v1 req do not have stream");
+      expect(() => response.stream).toThrowError("http v1 res do not have stream");
     });
   });
 });

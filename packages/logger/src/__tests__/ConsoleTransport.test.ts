@@ -1,5 +1,6 @@
-import ConsoleTransport from "../ConsoleTransport";
-import Level from "../enums/Level";
+import {jest} from "@jest/globals";
+import ConsoleTransport from "../ConsoleTransport.js";
+import Level from "../enums/Level.js";
 
 describe("ConsoleTransport", () => {
   const log = jest.spyOn(console, "log").mockReturnValue();

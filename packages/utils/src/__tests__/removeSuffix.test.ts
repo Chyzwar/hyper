@@ -1,4 +1,4 @@
-import removeSuffix from "../removeSuffix";
+import removeSuffix from "../removeSuffix.js";
 
 describe("removeSuffix", () => {
   it("should remove suffix", () => {

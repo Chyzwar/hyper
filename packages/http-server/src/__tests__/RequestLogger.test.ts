@@ -1,4 +1,5 @@
 import {Method, StatusCode} from "@hyper/http";
+import {jest} from "@jest/globals";
 
 import RequestLogger from "../RequestLogger";
 import Route from "../Route";
@@ -7,17 +8,16 @@ import MockRequest from "../MockRequest";
 import MockResponse from "../MockResponse";
 
 
+jest.useFakeTimers();
+jest.setSystemTime(1);
+
 describe("Request Logger", () => {
   const logger = {
     info: jest.fn(),
     error: jest.fn(),
     warn: jest.fn(),
   };
-  beforeEach(() => {
-    Date.now = jest.fn()
-      .mockReturnValueOnce(1)
-      .mockReturnValueOnce(2);
-  });
+
 
   const server = new Server({port: 0});
   server.add(new RequestLogger({logger}));

@@ -1,4 +1,5 @@
-import EventEmitter from "../EventEmitter";
+import {jest} from "@jest/globals";
+import EventEmitter from "../EventEmitter.js";
 
 type EventMap = {
   test: (test: string) => void;
