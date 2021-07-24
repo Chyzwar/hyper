@@ -31,8 +31,8 @@
     "@commitlint/cli": "12.x.x",
     "@commitlint/config-conventional": "12.x.x",
     "eslint": "7.x.x",
-    "jest": "27.x.x",
     "husky": "7.x.x",
+    "jest": "27.x.x",
     "lint-staged": "11.x.x",
     "typescript": "4.x.x"
   }
