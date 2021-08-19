@@ -1,5 +1,4 @@
 import {HttpClient} from "@hyper/http-client";
-
 import type Transport from "./types/Transport.js";
 import type Message from "./types/Message.js";
 
