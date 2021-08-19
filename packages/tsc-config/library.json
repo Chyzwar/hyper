@@ -29,7 +29,10 @@
     "declarationMap": true,
     "listEmittedFiles": false,
     "composite": true, 
-    "types": ["node", "jest"],
+    "types": [
+      "node", 
+      "jest"
+    ],
 
     "skipLibCheck": true
   }
