@@ -322,7 +322,8 @@ class Server implements Handler {
    */
   public async listen(): Promise<AddressInfo> {
     await this.mount(this.getOptions());
-
+    Object.freeze(this);
+    
     return new Promise<AddressInfo>((resolve) => {
       this.server.listen(this.options.port, () => {
         resolve(this.server.address() as AddressInfo); 

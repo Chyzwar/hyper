@@ -1,2 +1,2 @@
-export {default as JSONValue} from "./JSONValue";
-export {default as JSONObject} from "./JSONObject";
+export type {default as JSONValue} from "./JSONValue";
+export type {default as JSONObject} from "./JSONObject";

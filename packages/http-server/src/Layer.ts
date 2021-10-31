@@ -30,9 +30,7 @@ type EventMap = {
 
 class Layer<Req extends Request = Request, Res extends Response = Response> implements Handler<Req, Res> {
   private path?: Path;
-
   private options!: LayerOptions;
-
   private emitter?: EventEmitter<EventMap>;
 
   private readonly parentOptions!: HandlerOptions;
@@ -140,7 +138,7 @@ class Layer<Req extends Request = Request, Res extends Response = Response> impl
   }
 
   /**
-   * Mount parent
+   * Mount parent, freeze layer
    */
   public mount(parentOptions: HandlerOptions): void {
     this.setParentOptions(parentOptions);
@@ -158,6 +156,7 @@ class Layer<Req extends Request = Request, Res extends Response = Response> impl
     }
 
     this.selectHandle();
+    Object.freeze(this);
   }
   
   /**

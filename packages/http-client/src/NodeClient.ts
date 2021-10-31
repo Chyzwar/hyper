@@ -1,116 +1,166 @@
-import {Method, Localhost} from "@hyper/http";
-import {connect} from "http2";
-import type {Headers} from "@hyper/http";
-import type {JSONValue} from "@hyper/utility-types";
-import type {ClientHttp2Session} from "http2";
+import fetch from "node-fetch";
+import type {RequestInit} from "node-fetch";
+import { 
+  HttpError, 
+  Method, 
+  HeaderName, 
+  ContentType, 
+  Localhost, 
+  UserAgent,
+} from "@hyper/http";
+import {
+  removeSuffix, 
+  prefixWith,
+} from "@hyper/utils";
 
+import OptionsKey from "./enums/OptionsKey.js";
 import type BaseClient from "./types/BaseClient.js";
 import type RequestOptions from "./types/RequestOptions.js";
 
-type MethodOptions = Omit<RequestOptions, "method">;
 
-class NodeHttp implements BaseClient {
+type MethodOptions = Omit<Partial<RequestOptions>, "method">;
+
+const slash = "/";
+
+const defaultOptions = {
+  headers: {
+    [HeaderName.UserAgent]: UserAgent.Hyper,
+    [HeaderName.ContentType]: ContentType.ApplicationJSON,
+    [HeaderName.Accept]: ContentType.ApplicationJSON,
+  },
+};
+
+class BrowserHttp implements BaseClient {
   private readonly baseUrl: URL;
 
-  private baseOptions?: RequestOptions;
-
-  private session?: ClientHttp2Session;
+  private readonly baseOptions: RequestOptions;
 
   public constructor(baseUrl: URL = Localhost, baseOptions?: RequestOptions) {
     this.baseUrl = baseUrl;
-    this.baseOptions = baseOptions;
+
+    this.baseOptions = {
+      ...defaultOptions,
+      ...baseOptions,
+    };
   }
 
   /**
-   * Set Options
+   * Build request options.
+   * Use request options with fallback to base options
    */
-  public setOptions(options: RequestOptions): this {
-    this.baseOptions = options;
-    return this;
+  private addOption<K extends keyof RequestOptions>(options: RequestOptions, key: K, requestOptions?: RequestOptions): void {
+    if (requestOptions?.[key]) {
+      options[key] = requestOptions[key];
+    }
+    else if (this.baseOptions[key]) {
+      options[key] = this.baseOptions[key];
+    }
+  }
+
+  /**
+   * Create options object based on method, requestOptions and base options of client
+   * Use addOptions as micro optimization over object spread,
+   * Ensure that only valid options is created based on options Key
+   * Stringify any object if content type is JSON
+   */
+  private getOptions(method: Method, requestOptions?: MethodOptions): RequestInit {
+    const options: RequestOptions = {method};
+
+    this.addOption(options, OptionsKey.Credentials, requestOptions);
+    this.addOption(options, OptionsKey.Headers, requestOptions);
+    this.addOption(options, OptionsKey.Body, requestOptions);
+    this.addOption(options, OptionsKey.Mode, requestOptions);
+    this.addOption(options, OptionsKey.Redirect, requestOptions);
+
+    if (requestOptions?.body) {
+      if (options.headers && options.headers[HeaderName.ContentType] === ContentType.ApplicationJSON) {
+        options.body = JSON.stringify(requestOptions.body);
+      }
+    }
+
+    return options as RequestInit;
+  }
+
+  /**
+   * Get request address
+   * TODO: memoize this function
+   */
+  private getAddress(path?: string): string {
+    if (!path) {
+      return this.baseUrl.toString();
+    }
+
+    const {
+      href,
+    } = this.baseUrl;
+
+    return new URL(
+      `${removeSuffix(href, slash)}${prefixWith(path, slash)}`
+    ).toString();
+  }
+
+  /**
+   * Handle response unpack response to JSON.
+   * If request status code 4xx or 5xx throw exception
+  */
+  private static async handleResponse<R = unknown>(response: Response): Promise<R> {
+    if (response.ok) {
+      if (response.headers.get(HeaderName.ContentType) === ContentType.ApplicationJSON) {
+        return response.json() as Promise<R>;
+      }
+    }
+    else {
+      throw new HttpError(
+        response.status,
+        response.statusText
+      );
+    }
+  }
+
+  /**
+   * Create and execute fetch request.
+   */
+  private async makeRequest<R = unknown>(method: Method, path?: string, options?: MethodOptions): Promise<R> {
+    return fetch(
+      this.getAddress(path),
+      this.getOptions(method, options)
+    ).then(BrowserHttp.handleResponse);
   }
 
   /**
    * HTTP GET
    */
-  public async get(path?: string, options?: MethodOptions): Promise<JSONValue> {
-    return this.makeRequest(Method.GET, path, options);
+  public async get<R = unknown>(path?: string, options?: MethodOptions): Promise<R> {
+    return this.makeRequest<R>(Method.GET, path, options);
   }
 
   /**
    * HTTP POST
    */
-  public async post(path?: string, options?: MethodOptions): Promise<JSONValue> {
+  public async post<R = unknown>(path?: string, options?: MethodOptions): Promise<R> {
     return this.makeRequest(Method.POST, path, options);
   }
 
   /**
    * HTTP PUT
    */
-  public async put(path?: string, options?: MethodOptions): Promise<JSONValue> {
+  public async put<R = unknown>(path?: string, options?: MethodOptions): Promise<R> {
     return this.makeRequest(Method.PUT, path, options);
   }
 
   /**
    * HTTP PATH
    */
-  public async path(path?: string, options?: MethodOptions): Promise<JSONValue> {
+  public async path<R = unknown>(path?: string, options?: MethodOptions): Promise<R> {
     return this.makeRequest(Method.PATH, path, options);
   }
 
   /**
    * HTTP DELETE
    */
-  public async delete(path?: string, options?: MethodOptions): Promise<JSONValue> {
+  public async delete<R = unknown>(path?: string, options?: MethodOptions): Promise<R> {
     return this.makeRequest(Method.DELETE, path, options);
-  }
-
-  /**
-   * Get of initialize nw session
-   */
-  private getSession(): ClientHttp2Session {
-    return this.session ?? (this.session = connect(this.baseUrl));
-  }
-
-  /**
-   * Construct options for request
-   */
-  private getOptions(method: Method, path?: string, requestOptions?: MethodOptions): Headers {
-    const {baseOptions} = this;
- 
-    return {
-      ":path": path,
-      ":method": method,
-      ...baseOptions
-        ? baseOptions.headers
-        : null
-      ,
-      ...requestOptions
-        ? requestOptions.headers
-        : null
-      ,
-    };
-  }
-
-  private async makeRequest(method: Method, path?: string, options?: MethodOptions): Promise<JSONValue> {
-    const session = this.getSession();
-
-    return new Promise<string>((resolve: Function, reject: Function) => {
-      const request = session.request(
-        this.getOptions(method, path, options)
-      );
-
-      let data = "";
-      request.on("data", (chunk: Buffer) => {
-        data += chunk;
-      });
-      request.on("error", (error: Error) => {
-        reject(error);
-      });
-      request.on("end", () => {
-        resolve(data);
-      });
-    }).then(JSON.parse as (value: string) => JSONValue);
   }
 }
 
-export default NodeHttp;
+export default BrowserHttp;

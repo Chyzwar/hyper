@@ -1,6 +1,6 @@
-import HttpClient from "@hyper/http-client/lib/NodeClient";
-import Logger from "@hyper/logger/lib/Logger";
-import type JSONValue from "@hyper/utility-types/lib/JSONValue";
+import {HttpClient} from "@hyper/http-client";
+import {Logger} from "@hyper/logger";
+import type {JSONValue} from "@hyper/utility-types";
 
 const logger = new Logger();
 
@@ -9,7 +9,7 @@ const client = new HttpClient(
 );
 
 client.get("/employees")
-  .then((employees: JSONValue) => {
+  .then((employees) => {
     logger.info("list of employees", {employees});
   })
   .catch((error: Error) => {
@@ -18,7 +18,7 @@ client.get("/employees")
 
 client
   .post("/create", {body: {employee_name: "Marian Paźdioch"}})
-  .then((employee: JSONValue) => {
+  .then((employee) => {
     logger.info("new employee", {employee});
   })
   .catch((error: Error) => {

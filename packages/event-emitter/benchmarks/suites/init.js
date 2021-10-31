@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-unused-vars-experimental */
 
 import benchmark from "benchmark";
 import EventEmitter3 from "eventemitter3";

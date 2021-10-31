@@ -1,3 +1,3 @@
 
 
-export {default as ArrayOneOrMore} from "./ArrayOneOrMore.js";
+export type {default as ArrayOneOrMore} from "./ArrayOneOrMore.js";

@@ -1,6 +1,6 @@
 import benchmark from "benchmark";
 import bytes from "bytes";
-import stringToBytes from "@hyper/utils/lib/stringToBytes";
+import {stringToBytes} from "@hyper/utils";
 
 
 new benchmark.Suite()

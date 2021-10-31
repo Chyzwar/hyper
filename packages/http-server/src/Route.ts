@@ -140,7 +140,7 @@ class Route<Req extends Request = Request, Res extends Response = Response> impl
   }
 
   /**
-   * Mount parent
+   * Mount parent, freeze parent
    */
   public mount(parentOptions: HandlerOptions): void {
     this.emit("mount", parentOptions);
@@ -155,6 +155,7 @@ class Route<Req extends Request = Request, Res extends Response = Response> impl
     });
 
     this.selectHandle();
+    Object.freeze(this);
   }
 
   /**

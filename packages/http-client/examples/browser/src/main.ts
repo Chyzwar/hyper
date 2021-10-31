@@ -1,5 +1,5 @@
-import HttpClient from "@hyper/http-client/lib/BrowserClient";
-import Logger from "@hyper/logger/lib/Logger";
+import {HttpClient} from "@hyper/http-client";
+import {Logger} from "@hyper/logger";
 
 const logger = new Logger();
 

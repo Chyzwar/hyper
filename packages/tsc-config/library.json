@@ -33,7 +33,6 @@
       "node", 
       "jest"
     ],
-
     "skipLibCheck": true
   }
 }

@@ -123,7 +123,7 @@ class Chain extends Array<Handler> implements Handler {
   }
 
   /**
-   * Mount each layer to parent
+   * Mount each layer to parent, freeze chain
    */
   public async mount(parentOptions: HandlerOptions): Promise<void> {
     this.emit("mount", parentOptions);
@@ -134,6 +134,7 @@ class Chain extends Array<Handler> implements Handler {
     for (const handler of this) {
       await handler.mount(this.getOptions());
     }
+    Object.freeze(this);
   }
   
   /**

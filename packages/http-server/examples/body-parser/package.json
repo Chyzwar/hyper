@@ -6,16 +6,15 @@
   "scripts": {
     "start": "node --loader ts-node/esm server.ts"
   },
-
   "author": "chyzwar",
   "license": "MIT",
   "dependencies": {
     "@hyper/http-server": "0.x.x",
     "@hyper/logger": "0.x.x",
-    "@types/node": "16.x.x"
+    "@types/node": "^16.11.6"
   },
   "devDependencies": {
-    "ts-node": "10.x.x",
-    "typescript": "4.x.x"
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
   }
 }

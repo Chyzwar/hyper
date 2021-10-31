@@ -16,3 +16,12 @@ node_modules
 # Build Files #
 dist
 lib
+
+# Yarn
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

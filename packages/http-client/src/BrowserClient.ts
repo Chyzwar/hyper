@@ -1,4 +1,3 @@
-import type {JSONValue} from "@hyper/utility-types";
 import { 
   HttpError, 
   Method, 
@@ -102,9 +101,23 @@ class BrowserHttp implements BaseClient {
    * Handle response unpack response to JSON.
    * If request status code 4xx or 5xx throw exception
   */
-  private static async handleResponse<R extends JSONValue = JSONValue>(response: Response): Promise<R> {
+  private static async handleResponse<R = unknown>(response: Response): Promise<R> {
     if (response.ok) {
-      return response.json() as Promise<R>;
+      if (response.headers.get(HeaderName.ContentType) === ContentType.ApplicationJSON) {
+        return response.json() as Promise<R>;
+      }
+      else if (response.headers.get(HeaderName.ContentType) === ContentType.TextPlain) {
+        return response.text();
+      }
+      try {
+        return await (await await await await await response.json() as Promise<R>);
+      }
+      catch (e) {
+        throw new HttpError(
+          response.status,
+          response.statusText
+        );
+      }
     }
     else {
       throw new HttpError(
@@ -117,7 +130,7 @@ class BrowserHttp implements BaseClient {
   /**
    * Create and execute fetch request.
    */
-  private async makeRequest<R extends JSONValue = JSONValue>(method: Method, path?: string, options?: MethodOptions): Promise<R> {
+  private async makeRequest<R = unknown>(method: Method, path?: string, options?: MethodOptions): Promise<R> {
     return fetch(
       this.getAddress(path),
       this.getOptions(method, options)
@@ -127,35 +140,35 @@ class BrowserHttp implements BaseClient {
   /**
    * HTTP GET
    */
-  public async get<R extends JSONValue = JSONValue>(path?: string, options?: MethodOptions): Promise<R> {
+  public async get<R = unknown>(path?: string, options?: MethodOptions): Promise<R> {
     return this.makeRequest<R>(Method.GET, path, options);
   }
 
   /**
    * HTTP POST
    */
-  public async post<R extends JSONValue = JSONValue>(path?: string, options?: MethodOptions): Promise<R> {
+  public async post<R = unknown>(path?: string, options?: MethodOptions): Promise<R> {
     return this.makeRequest(Method.POST, path, options);
   }
 
   /**
    * HTTP PUT
    */
-  public async put<R extends JSONValue = JSONValue>(path?: string, options?: MethodOptions): Promise<R> {
+  public async put<R = unknown>(path?: string, options?: MethodOptions): Promise<R> {
     return this.makeRequest(Method.PUT, path, options);
   }
 
   /**
    * HTTP PATH
    */
-  public async path<R extends JSONValue = JSONValue>(path?: string, options?: MethodOptions): Promise<R> {
+  public async path<R = unknown>(path?: string, options?: MethodOptions): Promise<R> {
     return this.makeRequest(Method.PATH, path, options);
   }
 
   /**
    * HTTP DELETE
    */
-  public async delete<R extends JSONValue = JSONValue>(path?: string, options?: MethodOptions): Promise<R> {
+  public async delete<R = unknown>(path?: string, options?: MethodOptions): Promise<R> {
     return this.makeRequest(Method.DELETE, path, options);
   }
 }

@@ -170,7 +170,7 @@ class Router implements Handler {
 
 
   /**
-   * Mount router
+   * Mount router, freezes router
    */
   public async mount(parentOptions: HandlerOptions): Promise<void> {
     this.setParentOptions(parentOptions);
@@ -190,6 +190,7 @@ class Router implements Handler {
     }
 
     this.selectHandle();
+    Object.freeze(this);
   }
 
   /**

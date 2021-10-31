@@ -65,13 +65,6 @@ module.exports = {
     "ignoreStatic": true,
   }],
   /**
-   * Allow for unused args if later is used
-   * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars-experimental.md
-   */
-  "@typescript-eslint/no-unused-vars-experimental": ["error", {
-    "ignoreArgsIfArgsAfterAreUsed": true,
-  }],
-  /**
    * Allow for arrow functions to omit annotation
    * 
    * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/typedef.md
@@ -114,6 +107,7 @@ module.exports = {
     "allowCallbacks": "always",
     "allowLiterals": "always",
     "allowTupleTypes": "always",
+    "allowGenerics": "always",
   }],
   /**
    * I prefer not to add extra space before paren

@@ -10,12 +10,12 @@
   "license": "MIT",
   "dependencies": {
     "@hyper/utils": "0.x.x",
-    "bytes": "3.x.x"
+    "bytes": "^3.1.0"
   },
   "devDependencies": {
     "@hyper/eslint-config": "0.x.x",
-    "@types/benchmark": "1.x.x",
-    "benchmark": "2.x.x",
-    "eslint": "7.x.x"
+    "@types/benchmark": "^2.1.1",
+    "benchmark": "^2.1.4",
+    "eslint": "^8.1.0"
   }
 }
