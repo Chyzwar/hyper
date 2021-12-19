@@ -1,9 +1,10 @@
 
 enum ContentType{
-  TextHtml = "text/html; charset=UTF-8",
-  TextPlain = "text/plain; charset=UTF-8",
-  ApplicationJSON = "application/json; charset=UTF-8",
-  ApplicationUrlEncoded = "application/x-www-form-urlencoded; charset=UTF-8",
+  TextHtml = "text/html",
+  TextPlain = "text/plain",
+  ApplicationJSON = "application/json",
+  ApplicationOctetStream = "application/octet-stream",
+  ApplicationUrlEncoded = "application/x-www-form-urlencoded",
 }
 
 export default ContentType;

@@ -83,9 +83,9 @@ class Logger {
   }
 
   private log(level: Level, message: string, meta?: object): void {
-    for (const transport of this.transports) {
-      const time = new Date().toJSON();
+    const time = new Date().toJSON();
 
+    for (const transport of this.transports) {
       transport.send({
         level,
         time,

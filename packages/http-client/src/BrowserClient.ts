@@ -6,6 +6,7 @@ import {
   Localhost, 
   UserAgent,
 } from "@hyper/http";
+
 import {
   removeSuffix, 
   prefixWith,
@@ -14,6 +15,7 @@ import {
 import OptionsKey from "./enums/OptionsKey.js";
 import type BaseClient from "./types/BaseClient.js";
 import type RequestOptions from "./types/RequestOptions.js";
+import type ResponseType from "./types/ResponseType.js";
 
 
 type MethodOptions = Omit<Partial<RequestOptions>, "method">;
@@ -101,22 +103,22 @@ class BrowserHttp implements BaseClient {
    * Handle response unpack response to JSON.
    * If request status code 4xx or 5xx throw exception
   */
-  private static async handleResponse<R = unknown>(response: Response): Promise<R> {
+  private static async handleResponse<R extends  ResponseType>(response: Response): Promise<R> {
     if (response.ok) {
-      if (response.headers.get(HeaderName.ContentType) === ContentType.ApplicationJSON) {
+      if (response.headers.get(HeaderName.ContentType)?.startsWith(ContentType.ApplicationJSON)) {
         return response.json() as Promise<R>;
       }
-      else if (response.headers.get(HeaderName.ContentType) === ContentType.TextPlain) {
-        return response.text();
+      else if (response.headers.get(HeaderName.ContentType)?.startsWith(ContentType.TextPlain)) {
+        return response.text() as Promise<R>;
+      } 
+      else if (response.headers.get(HeaderName.ContentType)?.startsWith(ContentType.ApplicationUrlEncoded)) {
+        return response.formData() as Promise<R>;
+      } 
+      else if (response.headers.get(HeaderName.ContentType)?.startsWith(ContentType.ApplicationOctetStream)) {
+        return response.arrayBuffer() as Promise<R>;
       }
-      try {
-        return await (await await await await await response.json() as Promise<R>);
-      }
-      catch (e) {
-        throw new HttpError(
-          response.status,
-          response.statusText
-        );
+      else {
+        return response.blob() as Promise<R>;
       }
     }
     else {
@@ -130,7 +132,7 @@ class BrowserHttp implements BaseClient {
   /**
    * Create and execute fetch request.
    */
-  private async makeRequest<R = unknown>(method: Method, path?: string, options?: MethodOptions): Promise<R> {
+  private async makeRequest<R extends ResponseType>(method: Method, path?: string, options?: MethodOptions): Promise<R> {
     return fetch(
       this.getAddress(path),
       this.getOptions(method, options)
@@ -140,35 +142,35 @@ class BrowserHttp implements BaseClient {
   /**
    * HTTP GET
    */
-  public async get<R = unknown>(path?: string, options?: MethodOptions): Promise<R> {
+  public async get<R extends ResponseType>(path?: string, options?: MethodOptions): Promise<R> {
     return this.makeRequest<R>(Method.GET, path, options);
   }
 
   /**
    * HTTP POST
    */
-  public async post<R = unknown>(path?: string, options?: MethodOptions): Promise<R> {
+  public async post<R extends ResponseType>(path?: string, options?: MethodOptions): Promise<R> {
     return this.makeRequest(Method.POST, path, options);
   }
 
   /**
    * HTTP PUT
    */
-  public async put<R = unknown>(path?: string, options?: MethodOptions): Promise<R> {
+  public async put<R extends ResponseType>(path?: string, options?: MethodOptions): Promise<R> {
     return this.makeRequest(Method.PUT, path, options);
   }
 
   /**
    * HTTP PATH
    */
-  public async path<R = unknown>(path?: string, options?: MethodOptions): Promise<R> {
+  public async path<R extends ResponseType>(path?: string, options?: MethodOptions): Promise<R> {
     return this.makeRequest(Method.PATH, path, options);
   }
 
   /**
    * HTTP DELETE
    */
-  public async delete<R = unknown>(path?: string, options?: MethodOptions): Promise<R> {
+  public async delete<R extends ResponseType>(path?: string, options?: MethodOptions): Promise<R> {
     return this.makeRequest(Method.DELETE, path, options);
   }
 }
