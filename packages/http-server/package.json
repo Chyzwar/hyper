@@ -30,7 +30,7 @@
     "@hyper/logger": "0.x.x",
     "@hyper/utility-types": "0.x.x",
     "@hyper/utils": "0.x.x",
-    "@types/node": "^16.11.14"
+    "@types/node": "^17.0.13"
   },
   "devDependencies": {
     "@hyper/eslint-config": "0.x.x",
