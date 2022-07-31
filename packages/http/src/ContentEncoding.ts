@@ -1,5 +1,5 @@
 
-enum ContentEncoding{
+enum ContentEncoding {
   Deflate = "deflate",
   Br = "br",
   Gzip = "gzip",

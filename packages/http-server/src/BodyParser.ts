@@ -22,7 +22,7 @@ import ErrorCodes from "./enums/ErrorCodes.js";
 import type Request from "./types/Request";
 import type {LayerOptions} from "./Layer.js";
 
-export interface BodyParserOptions extends LayerOptions{
+export interface BodyParserOptions extends LayerOptions {
   limit: Bytes;
 }
 

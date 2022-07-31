@@ -1,7 +1,7 @@
 import type {LayerOptions} from "./Layer";
 import Layer from "./Layer";
 
-export interface CompressionOptions extends LayerOptions{
+export interface CompressionOptions extends LayerOptions {
   filter: Function;
 }
 

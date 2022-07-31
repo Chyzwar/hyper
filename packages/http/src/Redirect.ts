@@ -1,5 +1,5 @@
 
-enum Redirect{
+enum Redirect {
   Follow = "follow",
   Manual = "manual",
 }

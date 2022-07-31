@@ -5,7 +5,7 @@ import type HandlerOptions from "./types/HandlerOptions.js";
 import type Request from "./types/Request.js";
 import type Response from "./types/Response.js";
 
-export interface ChainOptions extends HandlerOptions{
+export interface ChainOptions extends HandlerOptions {
   chain?: Handler[];
 }
 

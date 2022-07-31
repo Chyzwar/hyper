@@ -1,5 +1,5 @@
 
-enum HeaderName{
+enum HeaderName {
   ContentType = "content-type",
   CacheControl = "cache-control",
   UserAgent = "user-agent",

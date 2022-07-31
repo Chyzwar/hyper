@@ -2,7 +2,7 @@ import type PartialBy from "../PartialBy";
 
 describe("Generic Type: PartialBy", () => {
   it("should make property optional", () => {
-    interface Test{
+    interface Test {
       a: string;
       b: string;
     }

@@ -7,7 +7,7 @@ const client = new HttpClient(
   new URL("https://jsonplaceholder.typicode.com")
 );
 
-interface Emp{
+interface Emp {
   employee_name: string;
 }
 client.get<Emp>("/posts")

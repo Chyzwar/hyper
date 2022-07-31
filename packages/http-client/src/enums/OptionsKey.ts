@@ -1,5 +1,5 @@
 
-enum OptionsKey{
+enum OptionsKey {
   Method = "method",
   Mode = "mode",
   Credentials = "credentials",

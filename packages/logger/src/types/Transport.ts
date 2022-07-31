@@ -1,6 +1,6 @@
 import type Message from "./Message";
 
-interface Transport{
+interface Transport {
   send: (message: Message) => void;
 }
 

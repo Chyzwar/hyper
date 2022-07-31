@@ -18,7 +18,7 @@ import type Path from "./path/types/Path.js";
 import type PathSource from "./path/types/PathSource.js";
 import type {RouteOptions} from "./Route.js";
 
-export interface RouterOptions extends HandlerOptions{
+export interface RouterOptions extends HandlerOptions {
   path?: PathSource;
 }
 

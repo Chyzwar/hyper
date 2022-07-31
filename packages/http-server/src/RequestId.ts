@@ -4,7 +4,7 @@ import Layer from "./Layer";
 import type {LayerOptions} from "./Layer";
 import type Request from "./types/Request.js";
 
-export interface RequestIdOptions extends LayerOptions{
+export interface RequestIdOptions extends LayerOptions {
   generateId: Function;
 }
 

@@ -3,7 +3,7 @@ import ConsoleTransport from "./ConsoleTransport.js";
 import type Transport from "./types/Transport.js";
 import type Formatter from "./types/Formatter.js";
 
-export interface LoggerOptions{
+export interface LoggerOptions {
   level?: Level;
   transports?: Transport[];
   formatter?: Formatter;

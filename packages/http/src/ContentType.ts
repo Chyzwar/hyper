@@ -1,5 +1,5 @@
 
-enum ContentType{
+enum ContentType {
   TextHtml = "text/html",
   TextPlain = "text/plain",
   ApplicationJSON = "application/json",

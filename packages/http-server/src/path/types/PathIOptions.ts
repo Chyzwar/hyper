@@ -1,5 +1,5 @@
 
-interface PathOptions{
+interface PathOptions {
   sensitive: boolean;
   strict: boolean;
   end: boolean;

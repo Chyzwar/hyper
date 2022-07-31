@@ -1,5 +1,5 @@
 
-enum Credentials{
+enum Credentials {
   SameOrigin = "same-origin",
   Include = "include",
   Omit = "omit",

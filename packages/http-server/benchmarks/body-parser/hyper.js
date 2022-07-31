@@ -6,7 +6,10 @@ const bodyParser = new BodyParser();
 const router = new Router();
 
 router.post("/", (req, res) => {
-  res.json({hyper: "Hello World"});
+  res.json({
+    message: "Hello World", 
+    body: req.body,
+  });
 });
 
 server.addLayer(bodyParser);

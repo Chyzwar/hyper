@@ -8,7 +8,7 @@ import type Response from "./types/Response.js";
 import type {LayerOptions} from "./Layer.js";
 
 
-export interface RequestLoggerOptions extends LayerOptions{
+export interface RequestLoggerOptions extends LayerOptions {
   successMessage?: string;
   errorMessage?: string;
   abortedMessage?: string;

@@ -45,7 +45,7 @@ import type ResponseOptions from "./types/ResponseOptions.js";
 
 type NativeOptions = Http1SecureServerOptions & Http1ServerOptions & Http2SecureServerOptions & Http2ServerOptions;
 
-export interface ServerOptions extends NativeOptions{
+export interface ServerOptions extends NativeOptions {
   port: number;
   http2?: boolean;
   pathOptions?: {

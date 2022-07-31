@@ -8,7 +8,7 @@ import type {
 } from "@hyper/http";
 
 
-interface RequestOptions{
+interface RequestOptions {
   method?: Method;
   mode?: Mode;
   credentials?: Credentials;

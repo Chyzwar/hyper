@@ -12,7 +12,7 @@ import type Path from "./path/types/Path.js";
 import type PathSource from "./path/types/PathSource.js";
 import type MatchParams from "./path/types/MatchParams.js";
 
-export interface LayerOptions extends HandlerOptions{
+export interface LayerOptions extends HandlerOptions {
   path?: PathSource;
 }
 

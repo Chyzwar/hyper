@@ -1,5 +1,5 @@
 
-enum Mode{
+enum Mode {
   NoCors = "no-cors",
   Cors = "cors",
   SameOrigin = "same-origin",
