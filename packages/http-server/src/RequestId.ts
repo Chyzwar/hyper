@@ -1,7 +1,7 @@
 import {uuid} from "@hyper/utils";
 
-import Layer from "./Layer";
-import type {LayerOptions} from "./Layer";
+import Layer from "./Layer.js";
+import type {LayerOptions} from "./Layer.js";
 import type Request from "./types/Request.js";
 
 export interface RequestIdOptions extends LayerOptions {

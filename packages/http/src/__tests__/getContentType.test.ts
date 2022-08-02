@@ -1,6 +1,6 @@
-import type {ContentType} from "../getContentType";
-import getContentType from "../getContentType";
-import Charset from "../Charset";
+import type {ContentType} from "../getContentType.js";
+import getContentType from "../getContentType.js";
+import Charset from "../Charset.js";
 
 
 describe("getContentType", () => {

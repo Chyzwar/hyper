@@ -1,11 +1,11 @@
 import {Method, StatusCode} from "@hyper/http";
 import {jest} from "@jest/globals";
 
-import RequestLogger from "../RequestLogger";
-import Route from "../Route";
-import Server from "../Server";
-import MockRequest from "../MockRequest";
-import MockResponse from "../MockResponse";
+import RequestLogger from "../RequestLogger.js";
+import Route from "../Route.js";
+import Server from "../Server.js";
+import MockRequest from "../MockRequest.js";
+import MockResponse from "../MockResponse.js";
 
 
 jest.useFakeTimers();

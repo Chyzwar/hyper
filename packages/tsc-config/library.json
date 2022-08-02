@@ -1,9 +1,9 @@
 {
   "compileOnSave": true,
   "compilerOptions": {
-    "moduleResolution": "node",
-    "module": "ESNext",
-    "target": "ES2020",
+    "moduleResolution": "node16",
+    "module": "node16",
+    "target": "ES2022",
     "newLine": "lf",
     "jsx": "react",
     "outDir": "lib",

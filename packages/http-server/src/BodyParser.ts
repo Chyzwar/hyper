@@ -19,7 +19,7 @@ import type {JSONValue} from "@hyper/utility-types";
 
 import Layer from "./Layer.js";
 import ErrorCodes from "./enums/ErrorCodes.js";
-import type Request from "./types/Request";
+import type Request from "./types/Request.js";
 import type {LayerOptions} from "./Layer.js";
 
 export interface BodyParserOptions extends LayerOptions {

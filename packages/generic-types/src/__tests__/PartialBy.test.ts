@@ -1,4 +1,4 @@
-import type PartialBy from "../PartialBy";
+import type PartialBy from "../PartialBy.js";
 
 describe("Generic Type: PartialBy", () => {
   it("should make property optional", () => {

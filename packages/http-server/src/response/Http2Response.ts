@@ -1,12 +1,10 @@
 import {HttpError, HeaderName, ContentType, StatusCode} from "@hyper/http";
 import {Http2ServerResponse} from "http2";
 
-import {defaultResponseOptions} from "../constants/defaultOptions";
-import type ResponseOptions from "../types/ResponseOptions";
+import {defaultResponseOptions} from "../constants/defaultOptions.js";
+import type ResponseOptions from "../types/ResponseOptions.js";
 
 class Http2Response<B = unknown> extends Http2ServerResponse {
-  public writableEnded!: boolean;
-  
   public options: Readonly<ResponseOptions> = defaultResponseOptions;
 
   public readonly statusMessage = "";

@@ -1,4 +1,4 @@
-import HttpError from "../HttpError";
+import HttpError from "../HttpError.js";
 
 describe("HttpError", () => {
   it("should initialize with message based on statusCode and statusText", () => {

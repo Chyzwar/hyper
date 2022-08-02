@@ -9,10 +9,8 @@ import Chars from "../enums/Chars.js";
 class Http1Request<B = unknown> extends IncomingMessage {
   [key: string]: unknown;
   
-  public url!: string;
   public parsedUrl!: Readonly<UrlWithParsedQuery>;
   public body!: B;
-  public method!: string;
   public scheme!: string;
   
   public routeParams?: Record<string, JSONValue>;

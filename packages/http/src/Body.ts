@@ -1,4 +1,4 @@
-import type JSONValue from "@hyper/utility-types/lib/JSONValue";
+import type {JSONValue} from "@hyper/utility-types";
 
 type Body =
   | Blob 

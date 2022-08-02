@@ -1,5 +1,5 @@
-import type RequestOptions from "./RequestOptions";
-import type ResponseType from "./ResponseType";
+import type RequestOptions from "./RequestOptions.js";
+import type ResponseType from "./ResponseType.js";
 
 abstract class BaseClient {
   /**

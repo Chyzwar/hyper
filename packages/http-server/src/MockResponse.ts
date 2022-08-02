@@ -4,9 +4,9 @@ import type {Headers} from "@hyper/http";
 import type {Socket} from "net";
 import type {ServerHttp2Stream} from "node:http2";
 
-import type Http1Response from "./response/Http1Response";
-import type ResponseOptions from "./types/ResponseOptions";
-import type Http1Request from "./request/Http1Request";
+import type Http1Response from "./response/Http1Response.js";
+import type ResponseOptions from "./types/ResponseOptions.js";
+import type Http1Request from "./request/Http1Request.js";
 
 export type MockResponseEvents = 
   | "error"; 

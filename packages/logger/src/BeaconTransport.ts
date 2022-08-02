@@ -1,5 +1,5 @@
-import type Transport from "./types/Transport";
-import type Message from "./types/Message";
+import type Transport from "./types/Transport.js";
+import type Message from "./types/Message.js";
 
 export interface BeaconTransportOptions {
   url: URL;

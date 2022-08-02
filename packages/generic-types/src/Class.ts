@@ -1,5 +1,5 @@
-import type Abstract from "./Abstract";
-import type Constructor from "./Constructor";
+import type Abstract from "./Abstract.js";
+import type Constructor from "./Constructor.js";
 
 type Class<T> = Abstract<T> | Constructor<T>;
 

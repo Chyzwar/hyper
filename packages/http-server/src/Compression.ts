@@ -1,5 +1,5 @@
-import type {LayerOptions} from "./Layer";
-import Layer from "./Layer";
+import type {LayerOptions} from "./Layer.js";
+import Layer from "./Layer.js";
 
 export interface CompressionOptions extends LayerOptions {
   filter: Function;

@@ -1,17 +1,11 @@
 import {HttpError, HeaderName, ContentType, StatusCode} from "@hyper/http";
 import {ServerResponse} from "http";
-import type {Socket} from "net";
 import type {ServerHttp2Stream} from "http2";
-import type {TLSSocket} from "tls";
-
-import {defaultResponseOptions} from "../constants/defaultOptions";
-import type ResponseOptions from "../types/ResponseOptions";
+import {defaultResponseOptions} from "../constants/defaultOptions.js";
+import type ResponseOptions from "../types/ResponseOptions.js";
 
 
 class Http1Response<B> extends ServerResponse {
-  
-  public connection!: Socket | TLSSocket;
-  public socket!: Socket | TLSSocket;
   public options: Readonly<ResponseOptions> = defaultResponseOptions;
 
   public get stream(): ServerHttp2Stream {

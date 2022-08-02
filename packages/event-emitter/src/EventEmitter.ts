@@ -1,4 +1,4 @@
-import type EventHandler from "./EventHandler";
+import type EventHandler from "./EventHandler.js";
 
 type EmitterEventMap = Record<string, EventHandler>;
 

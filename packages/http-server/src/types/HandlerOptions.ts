@@ -1,4 +1,4 @@
-import type ResponseOptions from "./ResponseOptions";
+import type ResponseOptions from "./ResponseOptions.js";
 
 interface HandlerOptions {
   responseOptions?: ResponseOptions;

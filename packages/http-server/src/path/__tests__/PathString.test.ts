@@ -1,4 +1,4 @@
-import PathString from "../PathString";
+import PathString from "../PathString.js";
 import type Match from "../types/Match.js";
 
 describe("PathString", () => {
