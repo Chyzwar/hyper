@@ -2,7 +2,7 @@
   "name": "@hyper/tsc-config",
   "version": "0.2.0",
   "engines": {
-    "node": "16.x.x",
+    "node": "18.x.x",
     "yarn": "1.x.x"
   },
   "type": "commonjs",

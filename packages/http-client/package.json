@@ -3,11 +3,10 @@
   "version": "0.2.0",
   "description": "HTTp client for browser",
   "engines": {
-    "node": "16.x.x",
+    "node": "18.x.x",
     "yarn": "1.x.x"
   },
   "type": "module",
-  "main": "./lib/index/default.js",
   "exports": {
     "browser": "./lib/index/browser.js",
     "node": "./lib/index/node.js"
@@ -27,8 +26,7 @@
     "@hyper/generic-types": "0.x.x",
     "@hyper/http": "0.x.x",
     "@hyper/utility-types": "0.x.x",
-    "@hyper/utils": "0.x.x",
-    "node-fetch": "^3.2.10"
+    "@hyper/utils": "0.x.x"
   },
   "devDependencies": {
     "@hyper/eslint-config": "0.x.x",

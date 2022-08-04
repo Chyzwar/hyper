@@ -1,5 +1,3 @@
-import fetch from "node-fetch";
-import type {RequestInit, Response} from "node-fetch";
 import { 
   HttpError, 
   Method, 

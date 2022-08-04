@@ -1,5 +1,4 @@
 
-export {default as uuid} from "./uuid.js";
 export {default as huid} from "./huid.js";
 export {default as stringToBytes} from "./stringToBytes.js";
 export type {Bytes} from "./stringToBytes.js";

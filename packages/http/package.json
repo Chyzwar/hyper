@@ -2,7 +2,7 @@
   "name": "@hyper/http",
   "version": "0.0.1",
   "engines": {
-    "node": "16.x.x",
+    "node": "18.x.x",
     "yarn": "1.x.x"
   },
   "type": "module",

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-misused-promises */
 import {EventEmitter} from "@hyper/event-emitter";
 
 import createPath from "./utils/createPath.js";

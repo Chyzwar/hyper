@@ -1,8 +1,9 @@
-import {uuid} from "@hyper/utils";
+
 
 import Layer from "./Layer.js";
 import type {LayerOptions} from "./Layer.js";
 import type Request from "./types/Request.js";
+import {randomUUID} from "crypto";
 
 export interface RequestIdOptions extends LayerOptions {
   generateId: Function;
@@ -14,6 +15,6 @@ export class RequestId extends Layer {
   }
 
   public handler(req: Request): void {
-    req.requestId = req.headers["x-request-id"] ?? req.headers["request-id"] ?? uuid();
+    req.requestId = req.headers["x-request-id"] ?? req.headers["request-id"] ?? randomUUID();
   }
 }
