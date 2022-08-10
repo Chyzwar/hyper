@@ -1,4 +1,5 @@
 import Charset from "./Charset.js";
+import ContentType from "./ContentType.js";
 import ContentTypes from "./ContentType.js";
 
 /**
@@ -15,20 +16,20 @@ const textTypes = [
 const commaSplit = /\s*;\s*/;
 const equalSplit = /\s*=\s*/;
 
-export interface ContentType {
+export interface Content {
   type: string;
   params: {
     charset: Charset;
   };
 }
 
-const jsonType: Readonly<ContentType> = {
-  type: "application/json",
+const jsonType: Readonly<Content> = {
+  type: ContentType.ApplicationJSON,
   params: {charset: Charset.UTF8},
 };
 
-const textPlain: Readonly<ContentType> = {
-  type: "text/plain",
+const textPlain: Readonly<Content> = {
+  type: ContentType.TextPlain,
   params: {charset: Charset.UTF8},
 };
 
@@ -43,7 +44,7 @@ const textPlain: Readonly<ContentType> = {
  *  params: { charset: "UTF-8" }
  * }
  */
-function getContentType(value: string): Readonly<ContentType> {
+function getContentType(value: string): Readonly<Content> {
   switch (value) {
     case ContentTypes.ApplicationJSON:
       return jsonType;

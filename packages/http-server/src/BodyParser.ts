@@ -185,7 +185,7 @@ export class BodyParser extends Layer {
         }, 
       } = getContentType(contentType);
   
-      if (type === "application/json") {
+      if (type === ContentType.ApplicationJSON) {
         const stream = this.getContentStream(req, encoding);
           
         req.body = await this.getJSONBody(
