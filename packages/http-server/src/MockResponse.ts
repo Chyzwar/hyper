@@ -47,6 +47,7 @@ class MockResponse<B = unknown> extends Writable implements Http1Response<B> {
   public getHeaderNames!: () => string[];
   public removeHeader!: (name: string) => void;
   public hasHeader!: (name: string) => boolean;
+  public writeEarlyHints!: (hints: Record<string, string[] | string>, callback?: () => void) => void;
   public setTimeout!: (msc: number, callback: () => void) => this;
   public data?: string;
   public req!: Http1Request;

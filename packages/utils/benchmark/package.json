@@ -14,8 +14,8 @@
   },
   "devDependencies": {
     "@hyper/eslint-config": "0.x.x",
-    "@types/benchmark": "^2.1.1",
+    "@types/benchmark": "^2.1.2",
     "benchmark": "^2.1.4",
-    "eslint": "^8.20.0"
+    "eslint": "^8.26.0"
   }
 }

@@ -12,6 +12,8 @@ import type {
   RequestListener, 
   Server as Htt1Server,
   ServerOptions as Http1ServerOptions,
+  IncomingMessage, 
+  ServerResponse,
 } from "http";
 import type { 
   Server as Htt1SecureServer,     
@@ -43,7 +45,12 @@ import type Handler from "./types/Handler.js";
 import type HandlerOptions from "./types/HandlerOptions.js";
 import type ResponseOptions from "./types/ResponseOptions.js";
 
-type NativeOptions = Http1SecureServerOptions & Http1ServerOptions & Http2SecureServerOptions & Http2ServerOptions;
+type NativeOptions = (
+  Http1SecureServerOptions & 
+  Http1ServerOptions &
+  Http2SecureServerOptions & 
+  Http2ServerOptions 
+);
 
 export interface ServerOptions extends NativeOptions {
   port: number;
@@ -90,10 +97,10 @@ type NativeServer = Htt1SecureServer | Htt1Server | Http2SecureServer | Http2Ser
 const defaults: Omit<ServerOptions, "port"> = {
   allowHTTP1: true,
   minVersion: "TLSv1.3",
-  IncomingMessage: Http1Request,
-  ServerResponse: Http1Response,
+  IncomingMessage: Http1Request as typeof IncomingMessage,
+  ServerResponse: Http1Response as typeof ServerResponse,
   Http1IncomingMessage: Http1Request,
-  Http1ServerResponse: Http1Response,
+  Http1ServerResponse: Http1Response as typeof ServerResponse,
   Http2ServerRequest: Http2Request,
   Http2ServerResponse: Http2Response,
 };

@@ -1,4 +1,4 @@
-import type {ContentType} from "../getContentType.js";
+import type {Content} from "../getContentType.js";
 import getContentType from "../getContentType.js";
 import Charset from "../Charset.js";
 
@@ -10,7 +10,7 @@ describe("getContentType", () => {
     ["text/html", {type: "text/html", params: {charset: Charset.UTF8}}],
     ["application/json; charset=UTF-8", {type: "application/json", params: {charset: Charset.UTF8}}],
     ["application/json", {type: "application/json", params: {charset: Charset.UTF8}}],
-  ])("should parse %s as %p", (type: string, result: ContentType) => {
+  ])("should parse %s as %p", (type: string, result: Content) => {
     expect(getContentType(type)).toEqual(result);
   });
 });
