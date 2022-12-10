@@ -1,5 +1,5 @@
 import isParam from "../isParam.js";
-
+import {describe, it, expect} from "@jest/globals";
 
 describe("isParam", () => {
   it("should return false", () => {

@@ -1,5 +1,5 @@
 import {Method, StatusCode} from "@hyper/http";
-import {jest} from "@jest/globals";
+import {describe, it, expect, jest} from "@jest/globals";
 
 import RequestLogger from "../RequestLogger.js";
 import Route from "../Route.js";

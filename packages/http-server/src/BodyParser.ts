@@ -38,21 +38,25 @@ export class BodyParser extends Layer {
     let stream = null;
 
     switch (encoding) {
-      case ContentEncoding.Deflate:
+      case ContentEncoding.Deflate: {
         stream = createInflate();
         req.pipe(stream);
         break;
-      case ContentEncoding.Gzip:
+      }
+      case ContentEncoding.Gzip: {
         stream = createGunzip();
         req.pipe(stream);
         break;
-      case ContentEncoding.Br:
+      }
+      case ContentEncoding.Br: {
         stream = createBrotliDecompress();
         req.pipe(stream);
         break;
-      case ContentEncoding.Identity:
+      }
+      case ContentEncoding.Identity: {
         stream = req;
         break;
+      }
       default:
         throw new HttpError(StatusCode.UnsupportedMediaType, `Content encoding unsupported: ${encoding}`);
     }
@@ -120,7 +124,9 @@ export class BodyParser extends Layer {
       }
       
       function onEnd(): void {
-        if (complete) return;
+        if (complete) {
+          return; 
+        }
         
         if (received !== length) {
           onError(

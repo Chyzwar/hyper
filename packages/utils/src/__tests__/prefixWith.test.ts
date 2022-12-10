@@ -1,5 +1,5 @@
 import prefixWith from "../prefixWith.js";
-
+import {describe, it, expect} from "@jest/globals";
 
 describe("prefixWith", () => {
   it("should add prefix", () => {

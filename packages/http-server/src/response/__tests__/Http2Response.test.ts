@@ -1,5 +1,6 @@
 import {IncomingMessage} from "http";
 import type {Socket} from "net";
+import {describe, it, expect} from "@jest/globals";
 
 import Http2Response from "../Http1Response.js";
 

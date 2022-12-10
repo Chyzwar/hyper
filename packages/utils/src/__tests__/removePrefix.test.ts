@@ -1,3 +1,4 @@
+import {describe, it, expect} from "@jest/globals";
 import removePrefix from "../removePrefix.js";
 
 describe("removePrefix", () => {

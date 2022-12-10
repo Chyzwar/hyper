@@ -1,5 +1,4 @@
-
-import {jest} from "@jest/globals";
+import {describe, it, expect, jest} from "@jest/globals";
 import {HeaderName, ContentType, UserAgent} from "@hyper/http";
 import BrowserClient from "../BrowserClient.js";
 

@@ -1,3 +1,4 @@
+import {describe, it, expect} from "@jest/globals";
 import type PartialBy from "../PartialBy.js";
 
 describe("Generic Type: PartialBy", () => {

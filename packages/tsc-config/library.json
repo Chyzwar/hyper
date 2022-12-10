@@ -30,8 +30,7 @@
     "listEmittedFiles": false,
     "composite": true, 
     "types": [
-      "node", 
-      "jest"
+      "node"
     ],
     "skipLibCheck": true
   }

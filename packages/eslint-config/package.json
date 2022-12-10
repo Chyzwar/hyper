@@ -13,9 +13,9 @@
     "eslint"
   ],
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.42.0",
-    "@typescript-eslint/parser": "^5.42.0",
-    "eslint-plugin-jest": "^27.1.4",
+    "@typescript-eslint/eslint-plugin": "^5.46.0",
+    "@typescript-eslint/parser": "^5.46.0",
+    "eslint-plugin-jest": "^27.1.6",
     "find-up": "^6.3.0"
   },
   "peerDependencies": {

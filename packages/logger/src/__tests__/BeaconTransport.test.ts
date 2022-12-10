@@ -1,4 +1,4 @@
-import {jest} from "@jest/globals";
+import {jest, describe, it, expect} from "@jest/globals";
 import BeaconTransport from "../BeaconTransport.js";
 import Level from "../enums/Level.js";
 

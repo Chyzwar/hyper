@@ -1,3 +1,4 @@
+import {describe, it, expect} from "@jest/globals";
 import removeSuffix from "../removeSuffix.js";
 
 describe("removeSuffix", () => {

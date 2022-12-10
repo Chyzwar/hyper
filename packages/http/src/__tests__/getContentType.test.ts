@@ -1,3 +1,4 @@
+import {describe, it, expect} from "@jest/globals";
 import type {Content} from "../getContentType.js";
 import getContentType from "../getContentType.js";
 import Charset from "../Charset.js";

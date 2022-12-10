@@ -11,10 +11,10 @@
   "dependencies": {
     "@hyper/event-emitter": "0.x.x",
     "benchmark": "^2.1.4",
-    "eventemitter3": "^4.0.7"
+    "eventemitter3": "^5.0.0"
   },
   "devDependencies": {
     "@hyper/eslint-config": "0.x.x",
-    "eslint": "^8.26.0"
+    "eslint": "^8.29.0"
   }
 }

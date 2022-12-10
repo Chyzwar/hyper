@@ -1,4 +1,4 @@
-import {jest} from "@jest/globals";
+import {jest, describe, afterEach, it, expect} from "@jest/globals";
 import Logger, {defaults} from "../Logger.js";
 import Level from "../enums/Level.js";
 

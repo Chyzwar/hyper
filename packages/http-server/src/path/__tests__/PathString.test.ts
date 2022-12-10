@@ -1,3 +1,4 @@
+import {describe, it, expect} from "@jest/globals";
 import PathString from "../PathString.js";
 import type Match from "../types/Match.js";
 

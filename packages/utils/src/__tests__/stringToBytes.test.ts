@@ -1,4 +1,5 @@
 import stringToBytes from "../stringToBytes.js";
+import {describe, it, expect} from "@jest/globals";
 
 describe("stringToBytes", () => {
   describe("stringToBytes", () => {

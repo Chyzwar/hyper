@@ -1,6 +1,6 @@
+import {describe, it, expect} from "@jest/globals";
 import {IncomingMessage} from "http";
 import type {Socket} from "net";
-
 import Http1Response from "../Http1Response.js";
 
 describe("Http1Response", () => {

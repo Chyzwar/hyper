@@ -16,6 +16,6 @@
     "@hyper/eslint-config": "0.x.x",
     "@types/benchmark": "^2.1.2",
     "benchmark": "^2.1.4",
-    "eslint": "^8.26.0"
+    "eslint": "^8.29.0"
   }
 }

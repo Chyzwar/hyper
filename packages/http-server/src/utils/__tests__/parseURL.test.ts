@@ -1,5 +1,5 @@
 import parseURL from "../parseURL.js";
-
+import {describe, it, expect} from "@jest/globals";
 
 describe("parseUrl", () => {
   it("should parse url", () => {
