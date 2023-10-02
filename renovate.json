@@ -1,0 +1,7 @@
+{
+  "schedule": ["every weekend"],
+  "rangeStrategy": "bump",
+  "extends": [
+    "config:base"
+  ]
+}

@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "outDir": "lib",
-    "allowJs": true
+    "allowJs": true,
+    "strictNullChecks": true
   },
   "include": [
     "suites/**/*.js",

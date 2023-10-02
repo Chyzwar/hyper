@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/consistent-indexed-object-style */
-import type JSONValue from "./JSONValue";
+import type JSONValue from "./JSONValue.js";
 
 interface JSONObject {
   [key: string]: JSONValue;

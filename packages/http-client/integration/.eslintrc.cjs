@@ -1,6 +1,6 @@
 
 module.exports = {
-  extends: "@hyper/eslint-config",
+  extends: "@chyzwar/eslint-config/node",
   parserOptions: {
     tsconfigRootDir: __dirname,
   },

@@ -15,6 +15,7 @@
     "**/jest.unit.js",
     "**/jest.setup.js",
     "**/jest.config.js",
+    "**/jest.config.ts",
     "**/examples/**/*js",
     "**/benchmarks/**/*js"
   ],

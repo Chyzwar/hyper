@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 import {Readable} from "stream";
 import {Method, HeaderName, ContentType} from "@hyper/http";
 import type {JSONValue} from "@hyper/utility-types";

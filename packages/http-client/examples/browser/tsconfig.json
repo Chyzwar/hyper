@@ -1,6 +1,5 @@
-
 {
-  "extends": "@hyper/tsc-config",
+  "extends": "@chyzwar/tsconfig/lib.json",
   "include": [
     "src/**/*.ts",
     "src/**/*.json"

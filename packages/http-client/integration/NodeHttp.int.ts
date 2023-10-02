@@ -1,4 +1,5 @@
 import HttpClient from "../lib/NodeClient";
+import {expect, describe, it} from "@jest/globals";
 
 describe("NodeHttp", () => {
   const client = new HttpClient(
@@ -8,7 +9,6 @@ describe("NodeHttp", () => {
   it("should get first 100 posts", async() => {
     const employees = await client.get("/posts");
 
-    // eslint-disable-next-line @typescript-eslint/no-magic-numbers
     expect(employees).toHaveLength(100);
   });
 });

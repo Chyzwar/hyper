@@ -51,7 +51,7 @@ function getContentType(value: string): Readonly<Content> {
     case ContentTypes.TextPlain:
       return textPlain; 
     default: {
-      const [type, params] = value.split(commaSplit) as [string, string | undefined];
+      const [type, params] = value.split(commaSplit) as [ContentType, string | undefined];
   
       if (textTypes.includes(type)) {
         if (params?.startsWith("charset")) {

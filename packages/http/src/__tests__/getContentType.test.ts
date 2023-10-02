@@ -6,7 +6,7 @@ import Charset from "../Charset.js";
 
 describe("getContentType", () => {
 
-  it.each<[string, {type: string; params: {charset: Charset}}]>([
+  it.each<[string, { type: string; params: { charset: Charset } }]>([
     ["text/html; charset=UTF-8", {type: "text/html", params: {charset: Charset.UTF8}}],
     ["text/html", {type: "text/html", params: {charset: Charset.UTF8}}],
     ["application/json; charset=UTF-8", {type: "application/json", params: {charset: Charset.UTF8}}],

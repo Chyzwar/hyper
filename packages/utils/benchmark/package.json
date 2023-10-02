@@ -13,7 +13,7 @@
     "bytes": "^3.1.2"
   },
   "devDependencies": {
-    "@hyper/eslint-config": "0.x.x",
+    "@chyzwar/eslint-config": "^0.2.2",
     "@types/benchmark": "^2.1.2",
     "benchmark": "^2.1.4",
     "eslint": "^8.29.0"

@@ -25,7 +25,7 @@ describe("Request Logger", () => {
   server.add(new Route({
     path: "/", 
     method: Method.GET,
-    handler: (req, res): void => {
+    handler: (_req, res): void => {
       res.json({message: "Info"});
     },
   }));

@@ -4,6 +4,7 @@ import type HandlerOptions from "./HandlerOptions.js";
 
 
 interface Handler<Req extends Request = Request, Res extends Response = Response> {
+
   /**
    * Parent handler mount
    */

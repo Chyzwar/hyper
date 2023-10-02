@@ -39,7 +39,7 @@ class MockResponse<B = unknown> extends Writable implements Http1Response<B> {
   public useChunkedEncodingByDefault!: boolean;
   public createPushResponse!: () => void; 
   public assignSocket!: (socket: Socket) => void;
-  public detachSocket!:  (socket: Socket) => void;
+  public detachSocket!: (socket: Socket) => void;
   public addTrailers!: (headers: Headers) => void;
   public writeContinue!: (callback: () => void) => void;
   public writeProcessing!: () => void;
@@ -94,7 +94,7 @@ class MockResponse<B = unknown> extends Writable implements Http1Response<B> {
     return this;
   }
 
-  public _write(chunk: string, encoding: string, callback: Function): void {
+  public _write(chunk: string, _encoding: string, callback: Function): void {
     this.data += chunk;
 
     if (this.simulate.includes("error")) {

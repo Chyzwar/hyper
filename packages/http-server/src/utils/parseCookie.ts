@@ -23,7 +23,7 @@ function parseCookie(cookie: string): Record<string, string> {
 
   for (const part of cookie.split(splitChars)) {
     const [key, value] = part.split("=");
-
+    console.log(part);
     const trimmedKey = key.trim();
     const trimmedValue = value.trim();
 

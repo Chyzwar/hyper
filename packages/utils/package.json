@@ -23,8 +23,8 @@
     "@hyper/generic-types": "0.x.x"
   },
   "devDependencies": {
-    "@hyper/eslint-config": "0.x.x",
-    "@hyper/tsc-config": "0.x.x",
+    "@chyzwar/eslint-config": "^0.2.0",
+    "@chyzwar/tsconfig": "^0.2.0",
     "@types/node": "^18.11.12",
     "eslint": "^8.29.0",
     "jest": "^29.3.1",

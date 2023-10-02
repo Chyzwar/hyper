@@ -1,4 +1,5 @@
 import type JSONValue from "../JSONValue";
+import {describe, it, expect} from "@jest/globals";
 
 describe("JSONValue", () => {
   it("should typecheck", () => {

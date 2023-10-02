@@ -1,5 +1,5 @@
 {
-  "extends": "@hyper/tsc-config/library.json",
+  "extends": "@chyzwar/tsconfig/lib.json",
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "lib",

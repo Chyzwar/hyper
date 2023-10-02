@@ -1,4 +1,4 @@
-import type JSONValue from "./JSONValue";
+import type JSONValue from "./JSONValue.js";
 
 type JSONArray = JSONValue[];
 

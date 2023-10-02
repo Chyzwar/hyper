@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-enum-comparison */
 
 import {Logger} from "@hyper/logger";
 import {HeaderName, StatusCode} from "@hyper/http";

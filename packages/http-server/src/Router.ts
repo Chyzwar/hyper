@@ -37,7 +37,7 @@ type EventMap = {
 const defaults = {
   pathOptions: {
     start: true,
-    end:  false,
+    end: false,
     strict: false,
     sensitive: true,
   },

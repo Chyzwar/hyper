@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/class-methods-use-this */
 import {Server, Router, Layer} from "@hyper/http-server";
 import type {Request, Response} from "@hyper/http-server";
 import {Logger} from "@hyper/logger";

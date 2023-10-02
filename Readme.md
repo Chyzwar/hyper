@@ -3,8 +3,6 @@
 ![Github Actions](https://github.com/chyzwar/hyper/workflows/Build/badge.svg)
 
 
-
-
 ```js
 import {Server, BodyParser, Router} from "@hyper/http-server";
 

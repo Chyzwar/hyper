@@ -1,6 +1,8 @@
+import type {Config} from "jest";
 
-module.exports = {
+const config: Config = {
   testRegex: "(/__tests__/.*|(\\.|/)(int|spec))\\.(ts?|tsx?)$",
   transformIgnorePatterns: ["/node_modules/(?!@hyper).+\\.js$"],
 };
 
+export default config;

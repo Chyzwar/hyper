@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-enum-comparison */
 import {removePrefix, removeSuffix, prefixWith} from "@hyper/utils";
 
 import Chars from "../enums/Chars.js";

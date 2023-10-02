@@ -301,6 +301,7 @@ class Server implements Handler {
    */
   public handler: (request: Request, response: Response) => Promise<void> = async(req: Request, res: Response): Promise<void> => {
     try {
+
       /**
        * Parse url, this cannot be done in constructor because
        * IncomingMessage do not have url parsed in constructor
