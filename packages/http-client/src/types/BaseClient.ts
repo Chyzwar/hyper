@@ -2,6 +2,7 @@ import type RequestOptions from "./RequestOptions.js";
 import type ResponseType from "./ResponseType.js";
 
 abstract class BaseClient {
+
   /**
    * Perform HTTP POST request
    */

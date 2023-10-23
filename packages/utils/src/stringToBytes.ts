@@ -52,7 +52,6 @@ export type Bytes = `${number}${
   | "mb" 
   | "PB" 
   | "Pb" 
-  | "Pb" 
   | "pB" 
   | "pb" 
   | "TB" 

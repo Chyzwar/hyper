@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/class-methods-use-this */
 import type Transport from "./types/Transport.js";
 import type Message from "./types/Message.js";
 

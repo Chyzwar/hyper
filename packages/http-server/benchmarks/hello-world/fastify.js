@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/restrict-template-expressions */
 /* eslint-disable @typescript-eslint/no-floating-promises */
 
 import fastify from "fastify";
@@ -9,11 +8,7 @@ server.get("/home", (request, reply) => {
   reply.send({hello: "world"});
 });
 
-server.listen(3200, 
-  /**
-   * @param {Error} [err]
-   * @param {String} [address]
-   */
+server.listen({port: 3200}, 
   (err, address) => {
     if (err) {
       console.error(`Server error on ${err.message}`);

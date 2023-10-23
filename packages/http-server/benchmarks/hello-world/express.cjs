@@ -4,7 +4,7 @@ const router = express.Router();
 const app = express();
 
 router.get("/home", (req, res) => {
-  res.json({express:"Hello World"});
+  res.json({express: "Hello World"});
 });
 
 app.use(router);

@@ -34,6 +34,8 @@ class MockRequest<B = unknown> extends Readable implements Http1Request<B> {
   public parsedUrl: UrlWithParsedQuery;
   public rawHeaders: string[];
   public headers: Headers;
+  public headersDistinct!: NodeJS.Dict<string[]>;
+  public trailersDistinct!: NodeJS.Dict<string[]>;
   public rawTrailers: string[];
   public trailers: Headers;
   public socket!: Socket;

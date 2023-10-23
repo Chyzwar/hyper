@@ -5,6 +5,10 @@ import BrowserClient from "../BrowserClient.js";
 describe("BrowserClient", () => {
   const mockFetchPromise = Promise.resolve({
     ok: true,
+    headers: {
+      get: jest.fn(),
+    },
+    blob: async() => Promise.resolve({google: "ok"}),
     json: async() => Promise.resolve({google: "ok"}),
   } as unknown as Response);
 

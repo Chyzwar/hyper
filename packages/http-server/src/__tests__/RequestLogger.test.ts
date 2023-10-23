@@ -7,7 +7,6 @@ import Server from "../Server.js";
 import MockRequest from "../MockRequest.js";
 import MockResponse from "../MockResponse.js";
 
-
 jest.useFakeTimers();
 jest.setSystemTime(1);
 

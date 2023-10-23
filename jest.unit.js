@@ -7,5 +7,6 @@ export default {
   transform: {},
   projects: [
     "<rootDir>/packages/*/jest.config.js",
+    "<rootDir>/packages/*/jest.config.ts",
   ],
 };

@@ -32,6 +32,7 @@ class MockResponse<B = unknown> extends Writable implements Http1Response<B> {
   public shouldKeepAlive!: boolean;
   public chunkedEncoding!: boolean;
   public upgrading!: boolean;
+  public strictContentLength!: boolean;
   public finished!: boolean;
   public headersSent!: boolean;
   public sendDate!: boolean;
@@ -75,6 +76,11 @@ class MockResponse<B = unknown> extends Writable implements Http1Response<B> {
   
   public setHeader(name: string, value: string[] | number | string): this {
     this.headers[name] = `${Array.isArray(value) ? value.join(", ") : value}`;
+    return this;
+  }
+  
+  public appendHeader(name: string, value: readonly string[]): this {
+    this.headers[name] = value.join(", ");
     return this;
   }
   

@@ -1,7 +1,7 @@
 import type {Config} from "jest";
 
 const config: Config = {
-  displayName: "@hyper/http-client",
+  displayName: "@hyper/event-emitter",
   testEnvironment: "jsdom",
   rootDir: "src",
   testMatch: ["**/__tests__/**/*.ts?(x)", "**/?(*.)+(spec|test).ts?(x)"],

@@ -1,5 +1,5 @@
 
-const enum Chars {
+enum Chars {
   Colon = ":",
   Slash = "/",
 }
