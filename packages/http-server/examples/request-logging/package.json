@@ -1,5 +1,5 @@
 {
-  "name": "@hyper/hyper-http-server-hello-world",
+  "name": "@hyper/hyper-http-server-request-logging",
   "version": "1.0.0",
   "description": "Simple server",
   "type": "module",

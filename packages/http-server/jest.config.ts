@@ -7,6 +7,7 @@ import type {Config} from "@jest/types";
  */
 const config: Config.InitialOptions = {
   testEnvironment: "node",
+  displayName: "@hyper/http-server",
   rootDir: "src",
   testMatch: ["**/__tests__/**/*.ts?(x)", "**/?(*.)+(spec|test).ts?(x)"],
   extensionsToTreatAsEsm: [".ts"],

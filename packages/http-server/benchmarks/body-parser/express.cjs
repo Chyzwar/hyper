@@ -7,7 +7,7 @@ const router = express.Router();
 app.use(bodyParser.json());
 
 router.post("/", (req, res) => {
-  res.json({express:"Hello World"});
+  res.json({express: "Hello World"});
 });
 
 app.use(router);

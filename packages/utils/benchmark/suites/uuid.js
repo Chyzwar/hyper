@@ -1,6 +1,6 @@
 import benchmark from "benchmark";
-import uuid from "@hyper/utils/lib/uuid";
-import huid from "@hyper/utils/lib/huid";
+import {uuid} from "@hyper/utils";
+import {huid} from "@hyper/utils";
 
 const hundredK = 100000;
 

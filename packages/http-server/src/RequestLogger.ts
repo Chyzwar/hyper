@@ -38,6 +38,7 @@ export interface RequestLoggerOptions extends LayerOptions {
   };
 }
 
+
 function baseSerializer(req: Request, res: Response, responseTime: number): object {
   return {
     responseTime,
@@ -103,17 +104,17 @@ class RequestLogger extends Layer {
     error: (req: Request, res: Response, responseTime: number, error?: Error) => object;
   };
 
-  public constructor(options: RequestLoggerOptions) {
+  public constructor(options?: RequestLoggerOptions) {
     super(options);
     
-    this.successMessage = options.successMessage ?? defaults.successMessage;
-    this.errorMessage = options.errorMessage ?? defaults.errorMessage;
-    this.abortedMessage = options.abortedMessage ?? defaults.abortedMessage;
+    this.successMessage = options?.successMessage ?? defaults.successMessage;
+    this.errorMessage = options?.errorMessage ?? defaults.errorMessage;
+    this.abortedMessage = options?.abortedMessage ?? defaults.abortedMessage;
 
-    this.logger = options.logger ?? defaults.logger;
+    this.logger = options?.logger ?? defaults.logger;
     this.serializers = {
       ...defaults.serializers,
-      ...options.serializers,
+      ...options?.serializers,
     };
   }
 
