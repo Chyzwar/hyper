@@ -4,6 +4,6 @@ export default {
   verbose: false,
   maxWorkers: 8,
   projects: [
-    "<rootDir>/packages/*/integration/jest.config.js",
+    "<rootDir>/packages/*/integration/jest.config.ts",
   ],
 };

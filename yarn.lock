@@ -968,6 +968,7 @@ __metadata:
     "@chyzwar/tsconfig": "npm:^0.2.14"
     "@hyper/http-client": "npm:0.x.x"
     "@hyper/utility-types": "npm:0.x.x"
+    "@jest/globals": "npm:^29.7.0"
     eslint: "npm:^8.53.0"
     jest: "npm:^29.7.0"
     typescript: "npm:^5.2.2"

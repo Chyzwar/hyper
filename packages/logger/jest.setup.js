@@ -1,8 +1,8 @@
-import {jest} from "@jest/globals";
+/* eslint-disable @typescript-eslint/no-empty-function */
 import {URL} from "url";
 
 Object.defineProperty(global.window.navigator, "sendBeacon", {
-  value: jest.fn(),
+  value: () => {},
   writable: true,
 });
 

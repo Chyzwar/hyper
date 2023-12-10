@@ -1,7 +1,6 @@
 import {HttpClient} from "@hyper/http-client";
 import {Logger} from "@hyper/logger";
 
-
 const logger = new Logger();
 
 const client = new HttpClient(

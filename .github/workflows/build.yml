@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [18.x, 20.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -23,11 +23,12 @@ jobs:
     - name: Build 
       run: yarn build
     
-    - name: Build 
+    - name: Units tests 
       run: yarn test
+
+    - name: Integration tests 
+      run: yarn int
       
     - name: Eslint
       run: yarn lint
-      env: 
-        NODE_OPTIONS: --max_old_space_size=4096
         

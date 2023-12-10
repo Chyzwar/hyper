@@ -1,6 +1,7 @@
 {
   "name": "@hyper/http-client-node-example",
   "version": "0.0.1",
+  "type": "module",
   "description": "Http Client in node example",
   "scripts": {
     "start": "ts-node src/main.ts"

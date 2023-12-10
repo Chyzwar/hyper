@@ -1,4 +1,4 @@
-import type JSONValue from "../JSONValue";
+import type JSONValue from "../JSONValue.js";
 import {describe, it, expect} from "@jest/globals";
 
 describe("JSONValue", () => {

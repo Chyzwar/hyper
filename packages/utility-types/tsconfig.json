@@ -1,7 +1,12 @@
 {
-  "extends": "./tsconfig.base.json",
+  "extends": "@chyzwar/tsconfig/lib.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "lib",
+    "tsBuildInfoFile": "./lib/buildInfo.json",    
+  },
   "include": [
     "src/**/*.ts",
     "src/**/*.json"
-  ]
+  ],
 }

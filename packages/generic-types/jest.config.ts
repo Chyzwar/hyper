@@ -1,8 +1,10 @@
 import type {Config} from "jest";
 
 const config: Config = {
-  testRegex: "(/__tests__/.*|(\\.|/)(int|spec))\\.(ts?|tsx?)$",
-  transformIgnorePatterns: ["/node_modules/(?!@hyper).+\\.js$"],
+  displayName: "@hyper/generic-types",
+  testEnvironment: "jsdom",
+  rootDir: "src",
+  testMatch: ["**/__tests__/**/*.ts?(x)", "**/?(*.)+(spec|test).ts?(x)"],
   extensionsToTreatAsEsm: [".ts"],
   moduleNameMapper: {
     "^(\\.{1,2}/.*)\\.js$": "$1",
