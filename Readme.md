@@ -1,5 +1,5 @@
 # Hyper Project
-![Github Actions](https://github.com/chyzwar/hyper/actions/workflows/Build/badge.svg)
+[![Build](https://github.com/chyzwar/hyper/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/chyzwar/hyper/actions/workflows/build.yml)
 
 Experimental web framework for node.js
 
