@@ -1,5 +1,5 @@
 # Hyper Project
-![Github Actions](https://github.com/chyzwar/hyper/actions/workflows/build/badge.svg)
+![Github Actions](https://github.com/chyzwar/hyper/actions/workflows/Build/badge.svg)
 
 Experimental web framework for node.js
 
@@ -61,8 +61,8 @@ server
 - middleware system simmilar to express
 - simple router
 - body parser 
-- isomorthic json logger
-- isomorthinc http client
+- isomorphic json logger
+- isomorphic http client
 - request logging middleware
 - mock request and response
 
