@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-enum-comparison */
 import Charset from "./Charset.js";
 import ContentType from "./ContentType.js";
 import ContentTypes from "./ContentType.js";

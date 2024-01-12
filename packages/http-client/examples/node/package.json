@@ -14,11 +14,11 @@
     "@hyper/utils": "0.x.x"
   },
   "devDependencies": {
-    "@chyzwar/eslint-config": "^0.2.14",
-    "@chyzwar/tsconfig": "^0.2.14",
-    "@types/node": "^18.18.8",
-    "eslint": "^8.53.0",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.2.2"
+    "@chyzwar/eslint-config": "^0.2.15",
+    "@chyzwar/tsconfig": "^0.2.15",
+    "@types/node": "^20.11.0",
+    "eslint": "^8.56.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
   }
 }

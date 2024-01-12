@@ -14,7 +14,7 @@
     "eventemitter3": "^5.0.1"
   },
   "devDependencies": {
-    "@chyzwar/eslint-config": "^0.2.14",
-    "eslint": "^8.53.0"
+    "@chyzwar/eslint-config": "^0.2.15",
+    "eslint": "^8.56.0"
   }
 }

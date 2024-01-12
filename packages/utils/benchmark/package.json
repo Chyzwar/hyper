@@ -13,9 +13,9 @@
     "bytes": "^3.1.2"
   },
   "devDependencies": {
-    "@chyzwar/eslint-config": "^0.2.14",
+    "@chyzwar/eslint-config": "^0.2.15",
     "@types/benchmark": "^2.1.5",
     "benchmark": "^2.1.4",
-    "eslint": "^8.53.0"
+    "eslint": "^8.56.0"
   }
 }

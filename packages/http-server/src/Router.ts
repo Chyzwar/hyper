@@ -357,7 +357,7 @@ class Router implements Handler {
    * Select handle for Router
    */
   private selectHandle(): void {
-    const path = this.path;
+    const {path} = this;
 
     if (path instanceof PathString) {
       this.handler = this.handlePathString;

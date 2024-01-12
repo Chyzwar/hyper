@@ -49,7 +49,7 @@ class PathParams implements Path {
         let match: Match = false;
 
         if (parts.length === urls.length) {
-          const length = urls.length;
+          const {length} = urls;
           for (let i = 0; i < length; i++) {
             if (params[i]) {
               if (match) {
@@ -97,9 +97,8 @@ class PathParams implements Path {
 
         const urls = url.split(Chars.Slash);
         let match: Match = false;
-
-        if (urls.length >= parts.length) {
-          const length = parts.length;
+        const {length} = parts;
+        if (urls.length >= length) {
           for (let i = 0; i < length; i++) {
             if (params[i]) {
               if (match) {
